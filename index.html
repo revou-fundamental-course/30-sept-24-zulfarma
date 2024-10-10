@@ -3,10 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Kalkulator Konversi Suhu</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="container">      
+    <header>
+      <h1>Kalkulator Konversi Suhu</h1>
+      <hr/>
+    </header>
   
+    <main>
+      <section>
+        <article>
+          <p>Masukkan suhu derajat Celcius (&deg;C) ke kotak dibawah,
+            lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&deg;F).</p>
+        </article>
+  
+        <!-- Inputan Suhu -->
+        <form class="padding-16">
+          <label for="input-suhu">Celcius: (&deg;C)</label>
+          <input type="number" id="input-suhu" placeholder="Celsius (&deg;C)">
+        </form>
+        
+        <div>
+          <button class="form-btn form-btn-submit" type="button" onclick="konversi()">Konversi</button>
+          <button class="form-btn form-btn-reset" type="button" onclick="reset()">Reset</button>
+          <button class="form-btn form-btn-reserve" type="button" onclick="reverse()">Reverse</button>
+        </div>
+  
+        <!-- Hasil Inputan -->
+        <div class="padding-16">
+          <label for="hasil-suhu">Fahrenheit: (&deg;F)</label>
+          <textarea id="hasil-suhu" rows="1" disabled placeholder="Fahrenheit (&deg;F)"></textarea>
+        </div>
+        
+        <!-- Cara Kalkulasi -->
+        <div class="padding-16">
+          <label for="how-to-suhu">Cara Kalkulasi:</label>
+          <textarea id="how-to-suhu" rows="2" disabled></textarea>
+        </div>
+      </section>
+  
+      <!-- Info Content -->
+      <section>
+        <header>
+          <h2>Cara Konversi Celcius (&deg;C) Ke Fahrenheit (&deg;F)</h2>
+          <hr />
+        </header>
+        <article>
+          <p>Suhu <span class="suhu-style">S</span> dalam derajat Fahrenheit (&deg;F) sama dengan suhu <span class="suhu-style">S</span> dalam derajat Celcius (&deg;C) kali <span class="suhu-style">9/5</span> tambah <span class="suhu-style">32</span>.</p>
+          <p><span class="suhu-style">S</span> <sub>(&deg;F)</sub> = (<span class="suhu-style">S</span><sub>(&deg;C)</sub> x 9/5) + 32</p>
+          <p>atau </p>
+          <p> <span class="suhu-style">S</span> <sub>(&deg;C)</sub> = (<span class="suhu-style">S</span><sub>(&deg;F)</sub> x 5/9) - 32
+          </p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
